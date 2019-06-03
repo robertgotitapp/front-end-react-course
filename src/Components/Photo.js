@@ -4,11 +4,8 @@ import {Link} from 'react-router-dom'
 
 function Photo(props) {
     const post = props.post
-    const { id, description, imageLink} = post
-    console.log(post)
-    console.log(id)
     return <figure className='figure'>
-        <Link to={`/single/${id}`}><img src={post.imageLink} alt={post.description}/></Link>
+        <Link to={`/single/${post.id}`}><img src={post.imageLink} alt={post.description}/></Link>
         <figcaption> 
             <p> 
                 {post.description} 
@@ -16,12 +13,12 @@ function Photo(props) {
         </figcaption>
         <div className='button-container'>
             <button onClick={() => {
-                props.removePost(props.index)
+                props.startRemovingPost(props.index, post.id)
                 props.history.push('/')
             }}>
                 Remove 
             </button>
-            <Link className='button' to={`/single/${id}`}>
+            <Link className='button' to={`/single/${post.id}`}>
                 <div className='comment-count'>
                     <div className='speech-bubble'></div>
                     {props.comments[post.id] ? props.comments[post.id].length : 0}
