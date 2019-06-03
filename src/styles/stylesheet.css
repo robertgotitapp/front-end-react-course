@@ -1,0 +1,215 @@
+html {
+    font-size: 10px;
+    font-family: 'sans-serif';
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'billabong';
+    text-align: center;
+    font-size: 13rem;
+    font-weight: 100;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+    color: black;
+}
+
+h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 a:focus {
+    outline: 0;
+}
+
+@font-face {
+    font-family: 'billabong';
+    src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: offwhite;
+}
+
+.photoGrid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.figure {
+    border: 1px solid #d3d3d3;
+    flex-basis: calc(33.333% - 4rem);
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem 2rem 2rem;
+}
+
+.figure single-photo{
+    flex-basis: calc(33.333% - 4rem);
+    border: 1px solid #d3d3d3;
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem 2rem 2rem;
+}
+
+.single-photo {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border: black;
+}
+
+.single-photo .figure {
+    box-shadow: none;
+    margin: 0 2rem 0 0;
+    border: 0;
+    padding: 0;
+    flex: 1 0 60%;
+    max-width: 60%;
+}
+
+.single-photo .comments {
+    flex: 1 0 40%;
+    max-width: 40%;
+}
+
+.single-photo .photo {
+    width: 100%;
+    margin: 0;
+}
+
+.comment {
+    width: 100%;
+}
+
+.comment p {
+    border-bottom: 1px solid #d3d3d3;
+    padding: 0.5rem 0;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    border: 0;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d3d3d3;
+    outline: none;
+    resize: vertical;
+}
+
+.speech-bubble {
+    width: 1.5rem;
+    height: 1.25rem;
+    background: #00f;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+}
+
+.speech-bubble:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1.25rem 1.25rem 0;
+    border-color: transparent #00f transparent transparent;
+    top: 30%;
+    left: 0;
+}
+
+.photo {
+    width: calc(100% + 4rem);
+    margin: -2rem 0rem 0rem -2rem;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    flex: 48;
+    color: red;
+    font-size: 15px;
+    border: 2px solid #f2f2f2;
+    line-height: 2;
+    padding: 5px;
+}
+
+.addIcon {
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    background: url('https://image.flaticon.com/icons/svg/60/60740.svg');
+    background-size: contain;
+    border: none;
+}
+
+.form {
+    background: white;
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input  {
+    font-family: sans-serif;
+    background: #f2f2f2;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+
+.form button {
+    font-family: 'sans-serif';
+    text-transform: uppercase;
+    background: #065784;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #788589;
+}
+
+button:hover {
+    border-color: blue;
+}
+
+.comment-count {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.loader {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    position: center;
+    justify-content: center;
+    font-size: 28pt;
+}
